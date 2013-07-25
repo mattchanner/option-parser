@@ -1,7 +1,7 @@
 
 exports.testOptionProperties = (test) ->
 
-    builder = require("../modules/options").builder()
+    builder = require("../src/options").builder()
 
     option = builder.add()
         .long("test")
@@ -19,7 +19,7 @@ exports.testOptionProperties = (test) ->
     test.done()
 
 exports.testOptionDescribe = (test) ->
-    builder = require("../modules/options").builder()
+    builder = require("../src/options").builder()
 
     option = builder.add()
         .long("test")
@@ -33,7 +33,7 @@ exports.testOptionDescribe = (test) ->
     test.done()
 
 exports.testOptionDoesMatch = (test) ->
-    builder = require("../modules/options").builder()
+    builder = require("../src/options").builder()
 
     option = builder.add()
         .long("test")
@@ -48,7 +48,7 @@ exports.testOptionDoesMatch = (test) ->
     test.done()
 
 exports.testOptionoesNotMatch = (test) ->
-    builder = require("../modules/options").builder()
+    builder = require("../src/options").builder()
 
     option = builder.add()
         .long("test")
@@ -62,7 +62,7 @@ exports.testOptionoesNotMatch = (test) ->
     test.done()
 
 exports.testBuilderAddMultiple = (test) ->    
-    builder = require("../modules/options").builder()
+    builder = require("../src/options").builder()
 
     builder.add()
         .long("test")
@@ -81,7 +81,7 @@ exports.testBuilderAddMultiple = (test) ->
     test.done()
 
 exports.testParseSingleshort = (test) ->
-    builder = require("../modules/options").builder()
+    builder = require("../src/options").builder()
 
     builder.add()
         .long("test")
@@ -97,7 +97,7 @@ exports.testParseSingleshort = (test) ->
     test.done()
 
 exports.testUnknownArgs = (test) ->
-    builder = require("../modules/options").builder()
+    builder = require("../src/options").builder()
 
     builder.add()
         .long("test")
@@ -114,7 +114,7 @@ exports.testUnknownArgs = (test) ->
     test.done()
 
 exports.multipleArguments = (test) ->
-    builder = require("../modules/options").builder()
+    builder = require("../src/options").builder()
 
     builder.add()
         .long("width").short("w").desc("The width of the path").defaultValue("700px").prop("width")
@@ -130,7 +130,7 @@ exports.multipleArguments = (test) ->
 
 exports.testRealWorldExample = (test) ->
 
-    builder = require("../modules/options").builder()
+    builder = require("../src/options").builder()
 
     builder.add()
         .long("width").short("w").desc("The width of the path").defaultValue("700px").prop("width")
@@ -155,7 +155,7 @@ exports.testRealWorldExample = (test) ->
     test.done()
 
 exports.parseThrowsErrorWhenNoOptionsAreDefined = (test) ->
-    builder = require("../modules/options").builder()
+    builder = require("../src/options").builder()
 
     test.throws ->
         builder.parse ["-a=jhdjk"]
@@ -163,7 +163,7 @@ exports.parseThrowsErrorWhenNoOptionsAreDefined = (test) ->
     test.done()
 
 exports.parseAddsOptionsWithDefaultsWhenNotSupplied = (test) ->
-    builder = require("../modules/options").builder()
+    builder = require("../src/options").builder()
 
     builder.add()
         .long("width").short("w").desc("The width of the path").defaultValue("700px").prop("width")
