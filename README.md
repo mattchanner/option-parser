@@ -16,3 +16,13 @@ A method is also added to the returned object to indicate whether the object is 
 from this method indicates that at least one configured option is absent from the returned object.
 
 
+Example usage (taken from the test cases):
+
+builder = require("../src/options").builder()
+
+option = builder.add()
+                .long("test")
+                .short("t")
+                .desc("Describes the option t")
+                .defaultValue(10)
+                .prop("TEST")
