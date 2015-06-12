@@ -47,7 +47,7 @@ exports.testOptionDoesMatch = (test) ->
 
     test.done()
 
-exports.testOptionoesNotMatch = (test) ->
+exports.testOptionDoesNotMatch = (test) ->
     builder = require("../src/options").builder()
 
     option = builder.add()
