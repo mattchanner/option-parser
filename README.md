@@ -25,4 +25,4 @@ Example usage (taken from the test cases):
                     .short("t")
                     .desc("Describes the option t")
                     .defaultValue(10)
-                  .prop("TEST")
+                    .prop("TEST")
