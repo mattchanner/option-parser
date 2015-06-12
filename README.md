@@ -6,7 +6,7 @@ A javascript \ coffeescript command line options parser compatible with node.js 
 This class represents the main builder used to construct the command line options expected by the calling application.  
 Once all options are constructed, the instance can be used to parse an array of command line arguments of the form 
 
---longform=value -short=value
+    --longform=value -short=value
      
 The results of the parse method will be an object containing attributes representing each of the parsed arguments.
 
