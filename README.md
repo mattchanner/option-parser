@@ -18,11 +18,11 @@ from this method indicates that at least one configured option is absent from th
 
 Example usage (taken from the test cases):
 
-builder = require("../src/options").builder()
+  builder = require("../src/options").builder()
 
-option = builder.add()
-                .long("test")
-                .short("t")
-                .desc("Describes the option t")
-                .defaultValue(10)
-                .prop("TEST")
+  option = builder.add()
+                  .long("test")
+                  .short("t")
+                  .desc("Describes the option t")
+                  .defaultValue(10)
+                  .prop("TEST")
